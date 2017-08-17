@@ -1,0 +1,17 @@
+{
+  "name": "checkpoint-angularjs",
+  "version": "1.0.0",
+  "description": "Karma test driven checkpoint on Angular controllers and services",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "author": "jsm",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine-core": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0"
+  }
+}
