@@ -51,15 +51,15 @@ describe('The musings service', function () {
     })
   })
 
-  describe('has a method ".delete" that', function () {
+  describe('has a method ".remove" that', function () {
     it('is a function', function () {
-      expect(musings.delete).toEqual(jasmine.any(Function))
+      expect(musings.remove).toEqual(jasmine.any(Function))
     })
 
     it('takes an index and deletes the musing at that index of the musings array', function () {
       const initialList = musings.all().concat()
       const deletedMusing = initialList[1]
-      musings.delete(1)
+      musings.remove(1)
       const updatedList = musings.all()
       expect(updatedList.length).toBe(initialList.length - 1)
       expect(updatedList).not.toContain(deletedMusing)

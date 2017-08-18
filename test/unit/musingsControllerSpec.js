@@ -11,11 +11,11 @@ describe('The musingsController', function () {
     ctrl = $controller('musingsController', {})
   }))
 
-  it('exitsts', function () {
+  it('exists', function () {
     expect(ctrl).toBeDefined()
   })
 
-  it('has a property "musing" that holds the return of `musings.all()`', function () {
+  it('has a property `musings` that holds the return of `musings.all()`', function () {
     expect(ctrl.musings).toEqual(musings.all())
   })
 
@@ -44,9 +44,9 @@ describe('The musingsController', function () {
     })
   })
 
-  it('has a method `deletedMusing` that takes an index and calls `musings.delete` with that index', function () {
+  it('has a method `removeMusing` that takes an index and calls `musings.remove` with that index', function () {
     const firstMusing = musings.all()[0]
-    ctrl.deleteMusing(0)
+    ctrl.removeMusing(0)
     expect(musings.all().indexOf(firstMusing)).toBe(-1)
   })
 })
